@@ -1,10 +1,10 @@
 # HEMMO
 
-**Team Raunio** is excited to introduce to you our game entry for Global Game Jam / Finnish Game Jam 2021. **Introspection** is a classic platformer puzzle game with a nostalgic atmosphere.
+**Team Raunio** is excited to introduce to you our game entry for Global Game Jam / Finnish Game Jam 2021. **Hemmo** is a classic platformer puzzle game with a nostalgic atmosphere.
 
 # History
 
-The Hemmo game project was initially launched in 2009 with ambitious plans, but was never taken from a concept to a prototype. We wanted to change that and breath life into this dear old project of ours. We hope you enjoy it as much as we enjoyed creating it.
+The Hemmo game project was initially launched in 2009 with ambitious plans, but was eventually never advanced from a concept to a prototype. In 2021, at the dawn of the new decade, we wanted to change that and breath life into this dear old project of ours. We hope you enjoy it as much as we enjoyed creating it.
 
 # Watch
 
