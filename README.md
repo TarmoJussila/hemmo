@@ -38,4 +38,5 @@ The game was created with **Unity 2019.4.16f1**.
 # Credits - Team Raunio
 
 Code + Graphics = Tarmo Jussila
+
 Music + Sounds = Juhani Haverinen
