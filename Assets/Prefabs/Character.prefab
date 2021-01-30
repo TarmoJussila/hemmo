@@ -202,13 +202,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterInput: {fileID: 8365354150801776327}
   moveSpeed: 10000
-  jumpSpeed: 12000
+  jumpSpeed: 5000
   animator: {fileID: 7403788086418327217}
   rigidbody: {fileID: 1462688867415836194}
   worldLayerMask:
     serializedVersion: 2
     m_Bits: 1
   jumpTimeLimit: 0.2
+  maxHorizontalVelocity: 10
 --- !u!114 &1359313976539247560
 MonoBehaviour:
   m_ObjectHideFlags: 0

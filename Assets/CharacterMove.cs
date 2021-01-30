@@ -9,8 +9,14 @@ public class CharacterMove : MonoBehaviour
     [SerializeField] private new Rigidbody2D rigidbody;
     [SerializeField] private LayerMask worldLayerMask;
     [SerializeField] private float jumpTimeLimit = 0.1f;
+    [SerializeField] private float maxHorizontalVelocity = 10f;
 
-    private float jumpTimer = 0f;
+    private float jumpTimer;
+
+    private void Awake()
+    {
+        jumpTimer = 0f;
+    }
 
     private void OnEnable()
     {
@@ -30,11 +36,16 @@ public class CharacterMove : MonoBehaviour
     {
         if (characterInput.IsMovingRight)
         {
-            rigidbody.AddForce(new Vector2(1f * moveSpeed * Time.deltaTime, 0f), ForceMode2D.Force);
+            rigidbody.AddForce(new Vector2(1f * moveSpeed * Time.fixedDeltaTime, 0f), ForceMode2D.Force);
         }
         else if (characterInput.IsMovingLeft)
         {
-            rigidbody.AddForce(new Vector2(-1f * moveSpeed * Time.deltaTime, 0f), ForceMode2D.Force);
+            rigidbody.AddForce(new Vector2(-1f * moveSpeed * Time.fixedDeltaTime, 0f), ForceMode2D.Force);
+        }
+
+        if (characterInput.IsMovingLeft || characterInput.IsMovingRight)
+        {
+            rigidbody.velocity = new Vector2(Mathf.Clamp(rigidbody.velocity.x, -maxHorizontalVelocity, maxHorizontalVelocity), rigidbody.velocity.y);
         }
     }
 
@@ -52,10 +63,9 @@ public class CharacterMove : MonoBehaviour
         {
             return;
         }
-
         animator.ResetTrigger("Reach");
         animator.SetTrigger("Stand");
-        rigidbody.AddForce(new Vector2(0f, jumpSpeed * Time.deltaTime), ForceMode2D.Impulse);
+        rigidbody.AddForce(new Vector2(0f, jumpSpeed * Time.fixedDeltaTime), ForceMode2D.Impulse);
         jumpTimer = jumpTimeLimit;
     }
 
