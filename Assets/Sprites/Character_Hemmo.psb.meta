@@ -120,14 +120,14 @@ ScriptedImporter:
     internalID: 0
     spriteBone:
     - name: Head
-      position: {x: 39.951942, y: 0.0000073536794, z: 0}
-      rotation: {x: 0, y: 0, z: 0.13095526, w: 0.9913883}
+      position: {x: 39.951874, y: -0.000023699315, z: 0}
+      rotation: {x: 0, y: 0, z: 0.13095579, w: 0.99138826}
       length: 72.338036
       parentId: 1
     - name: Neck
-      position: {x: -7.5680237, y: 31.589905, z: 0}
-      rotation: {x: 0, y: 0, z: 0.14658803, w: 0.9891977}
-      length: 39.951942
+      position: {x: -7.5680237, y: 31.589844, z: 0}
+      rotation: {x: 0, y: 0, z: 0.14658749, w: 0.98919773}
+      length: 39.951916
       parentId: -1
     spriteOutline: []
     vertices:
@@ -231,7 +231,7 @@ ScriptedImporter:
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
-    - position: {x: 94.45, y: 117.481995}
+    - position: {x: 94.972275, y: 116.21361}
       boneWeight:
         weight0: 1
         weight1: 0
@@ -241,7 +241,7 @@ ScriptedImporter:
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
-    - position: {x: 87.831, y: 132.952}
+    - position: {x: 98.201965, y: 139.91998}
       boneWeight:
         weight0: 1
         weight1: 0
@@ -251,7 +251,7 @@ ScriptedImporter:
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
-    - position: {x: 83.726, y: 151.30301}
+    - position: {x: 89.23557, y: 150.49278}
       boneWeight:
         weight0: 1
         weight1: 0
@@ -261,7 +261,7 @@ ScriptedImporter:
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
-    - position: {x: 73.97, y: 155}
+    - position: {x: 73.44773, y: 154.55234}
       boneWeight:
         weight0: 1
         weight1: 0
@@ -452,7 +452,7 @@ ScriptedImporter:
         boneIndex2: 0
         boneIndex3: 0
     spritePhysicsOutline: []
-    indices: 1d00000019000000180000000b0000000a0000000f0000000a000000090000001f0000001e00000009000000080000000e0000000d0000000c0000000b0000000f0000000e0000000c0000000b0000000e00000007000000060000001e000000030000001e000000040000000400000006000000050000001e0000000600000004000000090000001e0000001f000000010000001e0000000200000003000000020000001e0000001e0000000100000000000000070000001e00000008000000000000001c0000001d0000000f0000000a0000001f0000001f000000100000000f00000012000000110000001f000000100000001f000000110000001500000012000000160000001400000013000000120000001200000015000000140000001d000000170000001f0000001f0000001e0000001d0000001d0000001b000000190000001a000000190000001b0000001d0000001c0000001b000000170000001d00000018000000170000001600000012000000120000001f00000017000000000000001d0000001e000000
+    indices: 1d0000001900000018000000090000001f0000000a0000001e00000009000000080000000b0000000a0000000e0000000e0000000d0000000c0000000e0000000a0000000f0000000b0000000e0000000c00000007000000060000001e000000030000001e000000040000000400000006000000050000001e0000000600000004000000090000001e0000001f000000010000001e0000000200000003000000020000001e0000001e0000000100000000000000070000001e00000008000000000000001c0000001d0000000f0000000a0000001f0000001f000000100000000f00000012000000110000001f000000100000001f000000110000001500000012000000160000001400000013000000120000001200000015000000140000001d000000170000001f0000001f0000001e0000001d0000001d0000001b000000190000001a000000190000001b0000001d0000001c0000001b000000170000001d00000018000000170000001600000012000000120000001f00000017000000000000001d0000001e000000
     edges:
     - {x: 1, y: 0}
     - {x: 2, y: 1}
@@ -501,29 +501,29 @@ ScriptedImporter:
     internalID: 0
     spriteBone:
     - name: Chest
-      position: {x: 87.27516, y: 0.00007996008, z: 0}
-      rotation: {x: 0, y: 0, z: 0.004315845, w: 0.9999907}
-      length: 57.067753
+      position: {x: 87.275116, y: -0.00004466539, z: 0}
+      rotation: {x: 0, y: 0, z: 0.004312389, w: 0.9999907}
+      length: 57.067764
       parentId: 1
     - name: Back
       position: {x: 53.15847, y: -0.000004631608, z: 0}
-      rotation: {x: 0, y: 0, z: -0.5318271, w: 0.84685296}
-      length: 87.275185
+      rotation: {x: 0, y: 0, z: -0.53182673, w: 0.8468532}
+      length: 87.27515
       parentId: 5
     - name: Head
-      position: {x: 39.951935, y: -0.000019562958, z: 0}
-      rotation: {x: 0, y: 0, z: 0.13095523, w: 0.9913883}
+      position: {x: 39.951828, y: 0.000009009101, z: 0}
+      rotation: {x: 0, y: 0, z: 0.13095585, w: 0.99138826}
       length: 72.338036
       parentId: 3
     - name: Neck
-      position: {x: 57.06775, y: -0.00048035252, z: 0}
-      rotation: {x: 0, y: 0, z: 0.09612198, w: 0.99536955}
-      length: 39.951942
+      position: {x: 57.067802, y: -0.0001542299, z: 0}
+      rotation: {x: 0, y: 0, z: 0.09612444, w: 0.9953694}
+      length: 39.951916
       parentId: 0
     - name: Tail
-      position: {x: -29.63009, y: 16.367672, z: 0}
-      rotation: {x: 0, y: 0, z: 0.94367754, w: 0.33086678}
-      length: 44.671898
+      position: {x: -29.630093, y: 16.367691, z: 0}
+      rotation: {x: 0, y: 0, z: 0.9436775, w: 0.33086672}
+      length: 44.67191
       parentId: 1
     - name: Root
       position: {x: 59.223373, y: 19.865112, z: 0}
@@ -983,19 +983,19 @@ ScriptedImporter:
     internalID: 0
     spriteBone:
     - name: FrontFootLeft
-      position: {x: 53.45016, y: 0.000041098952, z: 0}
-      rotation: {x: 0, y: 0, z: 0.6469778, w: 0.7625088}
-      length: 26.72523
+      position: {x: 53.450012, y: 0.0000336832, z: 0}
+      rotation: {x: 0, y: 0, z: 0.6469778, w: 0.76250887}
+      length: 26.725231
       parentId: 1
     - name: FrontKneeLeft
-      position: {x: 45.78802, y: -0.000014419917, z: 0}
-      rotation: {x: 0, y: 0, z: -0.26064646, w: 0.9654343}
-      length: 53.45016
+      position: {x: 45.788067, y: -0.0000021338838, z: 0}
+      rotation: {x: 0, y: 0, z: -0.26064628, w: 0.9654344}
+      length: 53.45013
       parentId: 2
     - name: FrontLegLeft
-      position: {x: 55.94171, y: 117.48981, z: 0}
-      rotation: {x: 0, y: 0, z: -0.7665888, w: 0.6421384}
-      length: 45.788067
+      position: {x: 55.941467, y: 117.48932, z: 0}
+      rotation: {x: 0, y: 0, z: -0.76659083, w: 0.6421359}
+      length: 45.78813
       parentId: -1
     spriteOutline: []
     vertices:
@@ -1508,19 +1508,19 @@ ScriptedImporter:
     internalID: 0
     spriteBone:
     - name: FrontFootRight
-      position: {x: 48.975025, y: 0.000017268021, z: 0}
-      rotation: {x: 0, y: 0, z: 0.7046225, w: 0.7095825}
-      length: 28.871967
+      position: {x: 48.97493, y: 0.00007460649, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7046226, w: 0.7095824}
+      length: 28.87196
       parentId: 1
     - name: FrontKneeRight
-      position: {x: 48.799503, y: 0.0000118044845, z: 0}
-      rotation: {x: 0, y: 0, z: -0.4187925, w: 0.90808195}
-      length: 48.974968
+      position: {x: 48.799385, y: -0.000019020184, z: 0}
+      rotation: {x: 0, y: 0, z: -0.4187931, w: 0.90808165}
+      length: 48.97497
       parentId: 2
     - name: FrontLegRight
-      position: {x: 52.172394, y: 115.63739, z: 0}
-      rotation: {x: 0, y: 0, z: -0.69809896, w: 0.71600133}
-      length: 48.799583
+      position: {x: 52.17215, y: 115.63678, z: 0}
+      rotation: {x: 0, y: 0, z: -0.69810086, w: 0.7159995}
+      length: 48.7995
       parentId: -1
     spriteOutline: []
     vertices:
@@ -2023,14 +2023,14 @@ ScriptedImporter:
     internalID: 0
     spriteBone:
     - name: BackFootLeft
-      position: {x: 50.53853, y: 0.00007527903, z: 0}
-      rotation: {x: 0, y: 0, z: 0.7574753, w: 0.6528638}
-      length: 31.75873
+      position: {x: 50.53851, y: 0.000090711415, z: 0}
+      rotation: {x: 0, y: 0, z: 0.75747514, w: 0.6528641}
+      length: 31.758718
       parentId: 1
     - name: BackKneeLeft
       position: {x: 65.25797, y: 0.00003465699, z: 0}
-      rotation: {x: 0, y: 0, z: -0.26468942, w: 0.9643337}
-      length: 50.538544
+      rotation: {x: 0, y: 0, z: -0.26468903, w: 0.96433383}
+      length: 50.53847
       parentId: 2
     - name: BackLegLeft
       position: {x: 46.850372, y: 133.39313, z: 0}
@@ -2398,18 +2398,18 @@ ScriptedImporter:
     internalID: 0
     spriteBone:
     - name: BackFootRight
-      position: {x: 35.28524, y: -0.00002929467, z: 0}
-      rotation: {x: 0, y: 0, z: 0.79475087, w: 0.606936}
-      length: 26.560553
+      position: {x: 35.28517, y: 0.000008123032, z: 0}
+      rotation: {x: 0, y: 0, z: -0.79475075, w: -0.606936}
+      length: 26.560547
       parentId: 1
     - name: BackKneeRight
-      position: {x: 76.82956, y: 0.000044170058, z: 0}
-      rotation: {x: 0, y: 0, z: 0.2205138, w: -0.97538394}
+      position: {x: 76.82954, y: 0.000020857986, z: 0}
+      rotation: {x: 0, y: 0, z: -0.22051407, w: 0.97538376}
       length: 35.285168
       parentId: 2
     - name: BackLegRight
       position: {x: 44.845947, y: 129.69568, z: 0}
-      rotation: {x: 0, y: 0, z: -0.7511344, w: 0.6601494}
+      rotation: {x: 0, y: 0, z: -0.7511343, w: 0.6601495}
       length: 76.829544
       parentId: -1
     spriteOutline: []
@@ -2818,51 +2818,51 @@ ScriptedImporter:
       parentId: -1
     - name: Back
       position: {x: 53.158493, y: -0.0000032822827, z: 0}
-      rotation: {x: 0, y: 0, z: -0.5318271, w: 0.84685296}
-      length: 87.27518
+      rotation: {x: 0, y: 0, z: -0.53182673, w: 0.8468532}
+      length: 87.275154
       parentId: 0
     - name: Chest
-      position: {x: 87.27517, y: 0.000059792324, z: 0}
-      rotation: {x: 0, y: 0, z: 0.0043158373, w: 0.9999907}
-      length: 57.06775
+      position: {x: 87.27515, y: -0.00003515591, z: 0}
+      rotation: {x: 0, y: 0, z: 0.004312383, w: 0.9999907}
+      length: 57.06776
       parentId: 1
     - name: Neck
-      position: {x: 57.067745, y: -0.0004703945, z: 0}
-      rotation: {x: 0, y: 0, z: 0.09612198, w: 0.99536955}
-      length: 39.95194
+      position: {x: 57.067764, y: -0.0001384836, z: 0}
+      rotation: {x: 0, y: 0, z: 0.09612446, w: 0.9953693}
+      length: 39.951916
       parentId: 2
     - name: Head
-      position: {x: 39.951935, y: -0.000028950744, z: 0}
-      rotation: {x: 0, y: 0, z: 0.13095526, w: 0.9913883}
+      position: {x: 39.95189, y: -0.0000032974167, z: 0}
+      rotation: {x: 0, y: 0, z: 0.1309558, w: 0.9913882}
       length: 72.338036
       parentId: 3
     - name: FrontLegLeft
       position: {x: 69.21817, y: -43.559143, z: 0}
-      rotation: {x: 0, y: -0, z: -0.79823506, w: 0.6023462}
-      length: 45.788074
+      rotation: {x: 0, y: -0, z: -0.7982352, w: 0.60234594}
+      length: 45.788136
       parentId: 2
     - name: FrontKneeLeft
-      position: {x: 45.788094, y: -0.000013870234, z: 0}
-      rotation: {x: 0, y: 0, z: -0.26064655, w: 0.9654343}
-      length: 53.450172
+      position: {x: 45.788094, y: -0.000003543042, z: 0}
+      rotation: {x: 0, y: 0, z: -0.26064625, w: 0.9654344}
+      length: 53.450138
       parentId: 5
     - name: FrontLegRight
       position: {x: 91.14596, y: -47.658817, z: 0}
-      rotation: {x: 0, y: -0, z: -0.73358786, w: 0.67959464}
-      length: 48.799583
+      rotation: {x: 0, y: -0, z: -0.7335876, w: 0.6795949}
+      length: 48.799507
       parentId: 2
     - name: FrontKneeRight
-      position: {x: 48.799515, y: 0.000025011046, z: 0}
-      rotation: {x: 0, y: 0, z: -0.41879255, w: 0.90808195}
-      length: 48.97498
+      position: {x: 48.799477, y: -0.00002243656, z: 0}
+      rotation: {x: 0, y: 0, z: -0.41879317, w: 0.90808165}
+      length: 48.974976
       parentId: 7
     - name: FrontFootRight
-      position: {x: 48.974983, y: -0.000014984167, z: 0}
-      rotation: {x: 0, y: 0, z: 0.70462245, w: 0.7095825}
+      position: {x: 48.974964, y: 0.000028993567, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7046226, w: 0.70958227}
       length: 28.871967
       parentId: 8
     - name: FrontFootLeft
-      position: {x: 53.450134, y: 0.000012882507, z: 0}
+      position: {x: 53.45014, y: 0.000016842347, z: 0}
       rotation: {x: 0, y: 0, z: 0.6469778, w: 0.76250887}
       length: 26.725231
       parentId: 6
@@ -2873,27 +2873,27 @@ ScriptedImporter:
       parentId: 0
     - name: BackKneeLeft
       position: {x: 65.25807, y: 0.000026853875, z: 0}
-      rotation: {x: 0, y: 0, z: -0.26468942, w: 0.9643338}
-      length: 50.53854
+      rotation: {x: 0, y: 0, z: -0.26468906, w: 0.96433383}
+      length: 50.53847
       parentId: 11
     - name: BackFootLeft
-      position: {x: 50.538452, y: 0.000028022203, z: 0}
-      rotation: {x: 0, y: 0, z: 0.7574754, w: 0.6528638}
+      position: {x: 50.53842, y: 0.000036606238, z: 0}
+      rotation: {x: 0, y: 0, z: 0.75747514, w: 0.65286404}
       length: 31.758726
       parentId: 12
     - name: BackLegRight
       position: {x: 32.51236, y: 12.500321, z: 0}
-      rotation: {x: 0, y: -0, z: -0.9935398, w: 0.1134843}
+      rotation: {x: 0, y: -0, z: -0.9935398, w: 0.11348443}
       length: 76.829544
       parentId: 0
     - name: BackKneeRight
-      position: {x: 76.82954, y: 0.000023608081, z: 0}
-      rotation: {x: 0, y: 0, z: 0.2205138, w: -0.9753839}
+      position: {x: 76.829575, y: 0.0000096352305, z: 0}
+      rotation: {x: 0, y: 0, z: -0.22051406, w: 0.9753838}
       length: 35.285168
       parentId: 14
     - name: BackFootRight
-      position: {x: 35.285187, y: 0.0000057914594, z: 0}
-      rotation: {x: 0, y: 0, z: 0.7947508, w: 0.606936}
+      position: {x: 35.28516, y: -0.0000021372362, z: 0}
+      rotation: {x: 0, y: 0, z: -0.7947508, w: -0.6069359}
       length: 26.560553
       parentId: 15
     - name: Tail
