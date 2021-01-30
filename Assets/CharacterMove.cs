@@ -36,16 +36,39 @@ public class CharacterMove : MonoBehaviour
     {
         if (characterInput.IsMovingRight)
         {
+            if (IsTouchingGround())
+            {
+                if (!animator.GetBool("Walk"))
+                {
+                    animator.SetBool("Walk", true);
+                }
+            }
+
             rigidbody.AddForce(new Vector2(1f * moveSpeed * Time.fixedDeltaTime, 0f), ForceMode2D.Force);
         }
         else if (characterInput.IsMovingLeft)
         {
+            if (IsTouchingGround())
+            {
+                if (!animator.GetBool("Walk"))
+                {
+                    animator.SetBool("Walk", true);
+                }
+            }
+
             rigidbody.AddForce(new Vector2(-1f * moveSpeed * Time.fixedDeltaTime, 0f), ForceMode2D.Force);
         }
 
         if (characterInput.IsMovingLeft || characterInput.IsMovingRight)
         {
             rigidbody.velocity = new Vector2(Mathf.Clamp(rigidbody.velocity.x, -maxHorizontalVelocity, maxHorizontalVelocity), rigidbody.velocity.y);
+        }
+        else
+        {
+            if (animator.GetBool("Walk"))
+            {
+                animator.SetBool("Walk", false);
+            }
         }
     }
 
@@ -63,6 +86,7 @@ public class CharacterMove : MonoBehaviour
         {
             return;
         }
+
         animator.ResetTrigger("Reach");
         animator.ResetTrigger("Stand");
         animator.SetTrigger("Jump");
