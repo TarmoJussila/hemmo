@@ -1,27 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+[ExecuteInEditMode]
 public class MaterialOffset : MonoBehaviour
 {
     [SerializeField] private Material material;
-    [SerializeField] private float horizontalSpeed;
-    [SerializeField] private float verticalSpeed;
-
-    private void OnValidate()
-    {
-        UpdateOffset(horizontalSpeed, verticalSpeed);
-    }
+    [SerializeField] private Transform followTransform;
+    [SerializeField] private float followMultiplier = 0.05f;
 
     private void Update()
     {
-        UpdateOffset(horizontalSpeed, verticalSpeed);
+        UpdateOffset(material, followTransform, followMultiplier);
     }
 
-    private void UpdateOffset(float horizontalSpeed, float verticalSpeed)
+    private void UpdateOffset(Material material, Transform followTransform, float followMultiplier)
     {
-        var offset = new Vector2(horizontalSpeed, verticalSpeed);
-
+        var offset = new Vector2(followTransform.position.x * followMultiplier, followTransform.position.y * followMultiplier);
         material.mainTextureOffset = offset;
     }
 }
