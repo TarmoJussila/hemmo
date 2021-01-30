@@ -64,7 +64,8 @@ public class CharacterMove : MonoBehaviour
             return;
         }
         animator.ResetTrigger("Reach");
-        animator.SetTrigger("Stand");
+        animator.ResetTrigger("Stand");
+        animator.SetTrigger("Jump");
         rigidbody.AddForce(new Vector2(0f, jumpSpeed * Time.fixedDeltaTime), ForceMode2D.Impulse);
         jumpTimer = jumpTimeLimit;
     }
@@ -77,6 +78,7 @@ public class CharacterMove : MonoBehaviour
         }
 
         animator.ResetTrigger("Stand");
+        animator.ResetTrigger("Jump");
         animator.SetTrigger("Reach");
     }
 
@@ -88,6 +90,7 @@ public class CharacterMove : MonoBehaviour
         }
 
         animator.ResetTrigger("Reach");
+        animator.ResetTrigger("Jump");
         animator.SetTrigger("Stand");
     }
 
