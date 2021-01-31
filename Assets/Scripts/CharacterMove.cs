@@ -43,7 +43,7 @@ public class CharacterMove : MonoBehaviour
                 {
                     animator.SetBool("Walk", true);
                 }
-                animator.speed = Mathf.Abs(rigidbody.velocity.x) * walkAnimationSpeedMultiplier;
+                animator.speed = Mathf.Max(Mathf.Abs(rigidbody.velocity.x) * walkAnimationSpeedMultiplier, 1f);
             }
 
             rigidbody.AddForce(new Vector2(1f * moveSpeed * Time.fixedDeltaTime, 0f), ForceMode2D.Force);
@@ -56,7 +56,7 @@ public class CharacterMove : MonoBehaviour
                 {
                     animator.SetBool("Walk", true);
                 }
-                animator.speed = Mathf.Abs(rigidbody.velocity.x) * walkAnimationSpeedMultiplier;
+                animator.speed = Mathf.Max(Mathf.Abs(rigidbody.velocity.x) * walkAnimationSpeedMultiplier, 1f);
             }
 
             rigidbody.AddForce(new Vector2(-1f * moveSpeed * Time.fixedDeltaTime, 0f), ForceMode2D.Force);
@@ -94,6 +94,7 @@ public class CharacterMove : MonoBehaviour
         animator.ResetTrigger("Reach");
         animator.ResetTrigger("Stand");
         animator.SetTrigger("Jump");
+        animator.SetBool("Walk", false);
         animator.speed = 1f;
         rigidbody.AddForce(new Vector2(0f, jumpSpeed * Time.fixedDeltaTime), ForceMode2D.Impulse);
         jumpTimer = jumpTimeLimit;
