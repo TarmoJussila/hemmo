@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 2094893926915615032}
-  collectableAudioClip: {fileID: 8300000, guid: 454e800a4f84bad409f29c63975dabf1,
+  collectableAudioClip: {fileID: 8300000, guid: 1f345c7bdeb9a5f43956249efe70a36d,
     type: 3}
 --- !u!82 &2094893926915615032
 AudioSource:
@@ -59,7 +59,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.524
   m_Pitch: 1
   Loop: 0
   Mute: 0
