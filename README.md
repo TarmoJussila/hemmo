@@ -1,6 +1,6 @@
 # HEMMO
 
-**Hemmo** is a classic platformer game with a nostalgic atmosphere. In this game you are playing as Hemmo the French bulldog. Hemmo has found himself at a difficult situation where all his masks have been lost. Can you help Hemmo find all the lost masks and make Hemmo feel *funky* again?
+**Hemmo** is a classic platformer game with a nostalgic atmosphere. In this game you are playing as Hemmo the French bulldog. Hemmo has found himself at a difficult situation where all his masks have been lost. Can you help Hemmo find all the lost masks and make Hemmo feel *funky* again? The game was created in 48 hours during the Global Game Jam / Finnish Game Jam 2021.
 
 # History
 
