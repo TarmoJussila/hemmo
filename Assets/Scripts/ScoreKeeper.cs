@@ -21,7 +21,7 @@ public class ScoreKeeper : MonoBehaviour
     public void AddScore()
     {
         CurrentScore++;
-        OnScoreChanged?.Invoke(CurrentScore, MaxScore);
+        OnScoreChanged?.Invoke(Mathf.Min(CurrentScore, MaxScore), MaxScore);
 
         if (CurrentScore >= MaxScore)
         {
