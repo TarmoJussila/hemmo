@@ -13,8 +13,13 @@ public class ScoreDisplay : MonoBehaviour
         ScoreKeeper.OnScoreChanged -= OnScoreChanged;
     }
 
-    private void OnScoreChanged(int currentScore)
+    private void Start()
     {
-        GetComponent<Text>().text = currentScore.ToString();
+        GetComponent<Text>().text = "?";
+    }
+
+    private void OnScoreChanged(int currentScore, int maxScore)
+    {
+        GetComponent<Text>().text = currentScore + "/" + maxScore;
     }
 }
