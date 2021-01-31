@@ -25,6 +25,11 @@ public class CharacterInput : MonoBehaviour
     {
         if (stateManager.CurrentState != StateType.Game)
         {
+            if (IsMovingLeft || IsMovingRight)
+            {
+                IsMovingRight = false;
+                IsMovingLeft = false;
+            }
             return;
         }
 
