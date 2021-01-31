@@ -47,6 +47,7 @@ MonoBehaviour:
   audioSource: {fileID: 2094893926915615032}
   collectableAudioClip: {fileID: 8300000, guid: 1f345c7bdeb9a5f43956249efe70a36d,
     type: 3}
+  finishAudioClip: {fileID: 8300000, guid: 154d6e60fef23124b9f1c4a57909b411, type: 3}
 --- !u!82 &2094893926915615032
 AudioSource:
   m_ObjectHideFlags: 0

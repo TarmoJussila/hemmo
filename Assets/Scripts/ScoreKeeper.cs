@@ -16,6 +16,8 @@ public class ScoreKeeper : MonoBehaviour
     private void FinishGame()
     {
         FindObjectOfType<StateManager>().ChangeState(StateType.Finish);
+
+        FindObjectOfType<AudioPlayer>().PlayFinishAudioClip();
     }
 
     public void AddScore()
