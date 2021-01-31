@@ -13,9 +13,19 @@ public class ScoreKeeper : MonoBehaviour
         MaxScore = FindObjectsOfType<Collectable>().Length;
     }
 
+    private void FinishGame()
+    {
+        GetComponent<StateManager>().ChangeState(StateType.Finish);
+    }
+
     public void AddScore()
     {
         CurrentScore++;
         OnScoreChanged?.Invoke(CurrentScore, MaxScore);
+
+        if (CurrentScore >= MaxScore)
+        {
+            FinishGame();
+        }
     }
 }
