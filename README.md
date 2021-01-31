@@ -8,11 +8,11 @@ The Hemmo game project was initially launched in 2009 with ambitious plans, but 
 
 # Watch
 
-Gameplay video: TODO
+Gameplay video: [**Watch**](https://youtu.be/9fP6WQv6Hz8)
 
 # Download
 
-Executable (Windows): [Download](https://ggj.s3.amazonaws.com/games/2021/01/184589/exec/L6laY/Hemmo.zip)
+Executable (Windows): [**Download**](https://ggj.s3.amazonaws.com/games/2021/01/184589/exec/L6laY/Hemmo.zip)
 
 # Build
 
