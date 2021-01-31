@@ -15,7 +15,7 @@ public class ScoreKeeper : MonoBehaviour
 
     private void FinishGame()
     {
-        GetComponent<StateManager>().ChangeState(StateType.Finish);
+        FindObjectOfType<StateManager>().ChangeState(StateType.Finish);
     }
 
     public void AddScore()
