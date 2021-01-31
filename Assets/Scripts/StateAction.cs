@@ -15,6 +15,7 @@ public class StateAction : MonoBehaviour
         }
 
         FindObjectOfType<StateManager>().ChangeState(stateType);
+        isActionTriggered = true;
     }
 
     private void Update()

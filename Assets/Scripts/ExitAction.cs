@@ -13,6 +13,7 @@ public class ExitAction : MonoBehaviour
         }
 
         Application.Quit();
+        isActionTriggered = true;
     }
 
     private void Update()
