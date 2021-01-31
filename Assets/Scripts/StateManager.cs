@@ -19,9 +19,9 @@ public class State
 
 public class StateManager : MonoBehaviour
 {
-    [SerializeField] private List<State> states;
+    public StateType CurrentState { get; private set; }
 
-    private StateType currentState;
+    [SerializeField] private List<State> states;
 
     private void Awake()
     {
@@ -30,7 +30,7 @@ public class StateManager : MonoBehaviour
 
     public void ChangeState(StateType stateType)
     {
-        currentState = stateType;
+        CurrentState = stateType;
         var state = states.Find(s => s.StateType == stateType);
         state.OnStateEnterEvent?.Invoke();
     }
