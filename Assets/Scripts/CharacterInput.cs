@@ -6,7 +6,7 @@ public class CharacterInput : MonoBehaviour
     public delegate void CharacterEvent();
     public static CharacterEvent OnCharacterJump;
     public static CharacterEvent OnCharacterReach;
-    public static CharacterEvent OnCharacterSit;
+    public static CharacterEvent OnCharacterStand;
 
     public bool IsMovingLeft { get; private set; }
     public bool IsMovingRight { get; private set; }
@@ -55,7 +55,7 @@ public class CharacterInput : MonoBehaviour
         }
         else if (keyboard.downArrowKey.wasPressedThisFrame)
         {
-            OnCharacterSit?.Invoke();
+            OnCharacterStand?.Invoke();
         }
     }
 

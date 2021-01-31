@@ -243,6 +243,7 @@ MonoBehaviour:
   jumpTimeLimit: 0.2
   maxHorizontalVelocity: 10
   walkAnimationSpeedMultiplier: 0.4
+  characterContainer: {fileID: 2865686128673267868}
 --- !u!114 &1359313976539247560
 MonoBehaviour:
   m_ObjectHideFlags: 0

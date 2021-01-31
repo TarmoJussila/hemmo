@@ -11,26 +11,30 @@ public class CharacterMove : MonoBehaviour
     [SerializeField] private float jumpTimeLimit = 0.1f;
     [SerializeField] private float maxHorizontalVelocity = 10f;
     [SerializeField] private float walkAnimationSpeedMultiplier = 0.5f;
+    [SerializeField] private Transform characterContainer;
 
     private float jumpTimer;
+    private bool isCharacterDirectionRight;
 
     private void Awake()
     {
         jumpTimer = 0f;
+        isCharacterDirectionRight = true;
+        SetCharacterDirection(isCharacterDirectionRight);
     }
 
     private void OnEnable()
     {
         CharacterInput.OnCharacterJump += OnCharacterJump;
         CharacterInput.OnCharacterReach += OnCharacterReach;
-        CharacterInput.OnCharacterSit += OnCharacterSit;
+        CharacterInput.OnCharacterStand += OnCharacterStand;
     }
 
     private void OnDisable()
     {
         CharacterInput.OnCharacterJump -= OnCharacterJump;
         CharacterInput.OnCharacterReach -= OnCharacterReach;
-        CharacterInput.OnCharacterSit -= OnCharacterSit;
+        CharacterInput.OnCharacterStand -= OnCharacterStand;
     }
 
     private void FixedUpdate()
@@ -47,6 +51,12 @@ public class CharacterMove : MonoBehaviour
             }
 
             rigidbody.AddForce(new Vector2(1f * moveSpeed * Time.fixedDeltaTime, 0f), ForceMode2D.Force);
+
+            if (!isCharacterDirectionRight)
+            {
+                SetCharacterDirection(true);
+                isCharacterDirectionRight = true;
+            }
         }
         else if (characterInput.IsMovingLeft)
         {
@@ -60,6 +70,12 @@ public class CharacterMove : MonoBehaviour
             }
 
             rigidbody.AddForce(new Vector2(-1f * moveSpeed * Time.fixedDeltaTime, 0f), ForceMode2D.Force);
+
+            if (isCharacterDirectionRight)
+            {
+                SetCharacterDirection(false);
+                isCharacterDirectionRight = false;
+            }
         }
 
         if (characterInput.IsMovingLeft || characterInput.IsMovingRight)
@@ -74,6 +90,11 @@ public class CharacterMove : MonoBehaviour
                 animator.speed = 1f;
             }
         }
+    }
+
+    private void SetCharacterDirection(bool isRight)
+    {
+        characterContainer.localScale = new Vector3((isRight ? 1 : -1) * Mathf.Abs(characterContainer.localScale.x), characterContainer.localScale.y, characterContainer.localScale.z);
     }
 
     private void LateUpdate()
@@ -113,7 +134,7 @@ public class CharacterMove : MonoBehaviour
         animator.speed = 1f;
     }
 
-    private void OnCharacterSit()
+    private void OnCharacterStand()
     {
         if (!IsTouchingGround())
         {
