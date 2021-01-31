@@ -12,7 +12,7 @@ Gameplay video: TODO
 
 # Download
 
-Executable: TODO
+Executable (Windows): [Download](https://ggj.s3.amazonaws.com/games/2021/01/184589/exec/L6laY/Hemmo.zip)
 
 # Build
 
@@ -24,11 +24,11 @@ The game was created with **Unity 2019.4.16f1**.
 
 # Controls
 
-| Action        | Bind           | Controller  |
-| ------------- |:-------------:| -----:|
-| Move Right     | Right Arrow | Right Stick |
-| Move Left     | Left Arrow | Left Stick |
-| Jump/Climb | Space | Triggers |
+| Action        | Bind           |
+| ------------- |:-------------:|
+| Move Right     | Right Arrow |
+| Move Left     | Left Arrow |
+| Jump/Climb | Space |
 
 # Credits - Team Raunio
 
