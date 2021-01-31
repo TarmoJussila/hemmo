@@ -3,6 +3,10 @@ using UnityEngine.UI;
 
 public class ScoreDisplay : MonoBehaviour
 {
+    [SerializeField] private Animator infoAnimator;
+
+    private bool isInfoDisplayed = true;
+
     private void OnEnable()
     {
         ScoreKeeper.OnScoreChanged += OnScoreChanged;
@@ -21,5 +25,11 @@ public class ScoreDisplay : MonoBehaviour
     private void OnScoreChanged(int currentScore, int maxScore)
     {
         GetComponent<Text>().text = currentScore + "/" + maxScore;
+
+        if (isInfoDisplayed)
+        {
+            infoAnimator.SetTrigger("Hide");
+            isInfoDisplayed = false;
+        }
     }
 }
