@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8804753135079327644}
   - component: {fileID: 4784069404817956998}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ScoreSymbol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,6 +87,8 @@ GameObject:
   - component: {fileID: 4314590565963536866}
   - component: {fileID: 4314590565963536865}
   - component: {fileID: 4314590565963536864}
+  - component: {fileID: 7545556365626778787}
+  - component: {fileID: 8029704754387600651}
   m_Layer: 5
   m_Name: GameView
   m_TagString: Untagged
@@ -174,6 +176,37 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!225 &7545556365626778787
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4314590565963536871}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!95 &8029704754387600651
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4314590565963536871}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 543317da36dfe8e4499b4ddaeb63161c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7029057202610934630
 GameObject:
   m_ObjectHideFlags: 0
