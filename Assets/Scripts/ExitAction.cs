@@ -26,7 +26,7 @@ public class ExitAction : MonoBehaviour
 
         if (keyboard.enterKey.wasPressedThisFrame)
         {
-            Application.Quit();
+            ExitGame();
         }
     }
 }
