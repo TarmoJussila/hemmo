@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 8983300749852363880}
   - component: {fileID: 1359313976539247560}
   - component: {fileID: 4284217513139362640}
-  - component: {fileID: 7977582159420229894}
+  - component: {fileID: 682356605389479214}
   - component: {fileID: 1462688867415836194}
   m_Layer: 0
   m_Name: Character
@@ -211,6 +211,7 @@ MonoBehaviour:
     m_Bits: 1
   jumpTimeLimit: 0.2
   maxHorizontalVelocity: 10
+  walkAnimationSpeedMultiplier: 0.4
 --- !u!114 &1359313976539247560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,8 +240,8 @@ MonoBehaviour:
   followTransform: {fileID: 8937191719188275901}
   smoothTime: 1
   followOffset: {x: -1.35, y: 7}
---- !u!61 &7977582159420229894
-BoxCollider2D:
+--- !u!60 &682356605389479214
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -262,9 +263,14 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.7, y: 1.2}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.09394455, y: 0.34197998}
+      - {x: -0.7568215, y: 0.26794815}
+      - {x: -0.684451, y: -0.56}
+      - {x: 0.16200793, y: -0.56}
+      - {x: 0.81673205, y: 0.19112444}
+      - {x: 0.57345295, y: 0.56617355}
 --- !u!50 &1462688867415836194
 Rigidbody2D:
   serializedVersion: 4

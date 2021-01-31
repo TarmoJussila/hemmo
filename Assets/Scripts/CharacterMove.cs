@@ -10,6 +10,7 @@ public class CharacterMove : MonoBehaviour
     [SerializeField] private LayerMask worldLayerMask;
     [SerializeField] private float jumpTimeLimit = 0.1f;
     [SerializeField] private float maxHorizontalVelocity = 10f;
+    [SerializeField] private float walkAnimationSpeedMultiplier = 0.5f;
 
     private float jumpTimer;
 
@@ -42,6 +43,7 @@ public class CharacterMove : MonoBehaviour
                 {
                     animator.SetBool("Walk", true);
                 }
+                animator.speed = Mathf.Abs(rigidbody.velocity.x) * walkAnimationSpeedMultiplier;
             }
 
             rigidbody.AddForce(new Vector2(1f * moveSpeed * Time.fixedDeltaTime, 0f), ForceMode2D.Force);
@@ -54,6 +56,7 @@ public class CharacterMove : MonoBehaviour
                 {
                     animator.SetBool("Walk", true);
                 }
+                animator.speed = Mathf.Abs(rigidbody.velocity.x) * walkAnimationSpeedMultiplier;
             }
 
             rigidbody.AddForce(new Vector2(-1f * moveSpeed * Time.fixedDeltaTime, 0f), ForceMode2D.Force);
@@ -68,6 +71,7 @@ public class CharacterMove : MonoBehaviour
             if (animator.GetBool("Walk"))
             {
                 animator.SetBool("Walk", false);
+                animator.speed = 1f;
             }
         }
     }
@@ -90,6 +94,7 @@ public class CharacterMove : MonoBehaviour
         animator.ResetTrigger("Reach");
         animator.ResetTrigger("Stand");
         animator.SetTrigger("Jump");
+        animator.speed = 1f;
         rigidbody.AddForce(new Vector2(0f, jumpSpeed * Time.fixedDeltaTime), ForceMode2D.Impulse);
         jumpTimer = jumpTimeLimit;
     }
@@ -104,6 +109,7 @@ public class CharacterMove : MonoBehaviour
         animator.ResetTrigger("Stand");
         animator.ResetTrigger("Jump");
         animator.SetTrigger("Reach");
+        animator.speed = 1f;
     }
 
     private void OnCharacterSit()
@@ -116,6 +122,7 @@ public class CharacterMove : MonoBehaviour
         animator.ResetTrigger("Reach");
         animator.ResetTrigger("Jump");
         animator.SetTrigger("Stand");
+        animator.speed = 1f;
     }
 
     private bool IsTouchingGround()
