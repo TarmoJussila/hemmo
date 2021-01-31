@@ -37,7 +37,7 @@ public class CharacterMove : MonoBehaviour
     {
         if (characterInput.IsMovingRight)
         {
-            if (IsTouchingGround())
+            if (!IsJumping())
             {
                 if (!animator.GetBool("Walk"))
                 {
@@ -50,7 +50,7 @@ public class CharacterMove : MonoBehaviour
         }
         else if (characterInput.IsMovingLeft)
         {
-            if (IsTouchingGround())
+            if (!IsJumping())
             {
                 if (!animator.GetBool("Walk"))
                 {
@@ -134,5 +134,10 @@ public class CharacterMove : MonoBehaviour
     private bool CanJump()
     {
         return jumpTimer <= 0f;
+    }
+
+    private bool IsJumping()
+    {
+        return !CanJump() || !IsTouchingGround();
     }
 }
