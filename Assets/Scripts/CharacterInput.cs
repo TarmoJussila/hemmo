@@ -40,7 +40,12 @@ public class CharacterInput : MonoBehaviour
             return;
         }
 
-        if (keyboard.rightArrowKey.isPressed)
+        if (keyboard.rightArrowKey.isPressed && keyboard.leftArrowKey.isPressed)
+        {
+            IsMovingRight = false;
+            IsMovingLeft = false;
+        }
+        else if (keyboard.rightArrowKey.isPressed)
         {
             IsMovingRight = true;
         }
