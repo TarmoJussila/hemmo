@@ -1,11 +1,17 @@
 ﻿using UnityEngine;
 
-[ExecuteInEditMode]
 public class MaterialOffset : MonoBehaviour
 {
     [SerializeField] private Material material;
     [SerializeField] private Transform followTransform;
     [SerializeField] private float followMultiplier = 0.05f;
+
+#if UNITY_EDITOR
+    private void OnApplicationQuit()
+    {
+        UpdateOffset(material, followTransform, 0f);
+    }
+#endif
 
     private void Update()
     {
