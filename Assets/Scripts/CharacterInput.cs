@@ -11,14 +11,23 @@ public class CharacterInput : MonoBehaviour
     public bool IsMovingLeft { get; private set; }
     public bool IsMovingRight { get; private set; }
 
+    private StateManager stateManager;
+
     private void Start()
     {
+        stateManager = FindObjectOfType<StateManager>();
+
         IsMovingLeft = false;
         IsMovingRight = false;
     }
 
     private void Update()
     {
+        if (stateManager.CurrentState != StateType.Game)
+        {
+            return;
+        }
+
         UpdateKeyboardInput();
         UpdateGamepadInput();
     }
