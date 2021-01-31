@@ -13,11 +13,11 @@ public class ScoreKeeper : MonoBehaviour
         MaxScore = FindObjectsOfType<Collectable>().Length;
     }
 
-    private void FinishGame()
+    public void FinishGame()
     {
         FindObjectOfType<StateManager>().ChangeState(StateType.Finish);
-
         FindObjectOfType<AudioPlayer>().PlayFinishAudioClip();
+        FindObjectOfType<MusicPlayer>().PlayEndMusic();
     }
 
     public void AddScore()

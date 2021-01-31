@@ -44,7 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5ace4eadd349fc448211fedb9518c1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 3191966027324125570}
+  gameMusic: {fileID: 8300000, guid: fc1447597fb5af64385111feabfeda6a, type: 3}
+  endMusic: {fileID: 8300000, guid: 26ddbdb102a0738499b5c55e8de30a8c, type: 3}
+  volumeFadeSpeed: 0.1
 --- !u!82 &3191966027324125570
 AudioSource:
   m_ObjectHideFlags: 0
