@@ -46,6 +46,7 @@ public class CharacterMove : MonoBehaviour
                 if (!animator.GetBool("Walk"))
                 {
                     animator.SetBool("Walk", true);
+                    animator.SetTrigger("Stand"); // Make sure idle animation is active.
                 }
                 animator.speed = Mathf.Max(Mathf.Abs(rigidbody.velocity.x) * walkAnimationSpeedMultiplier, 1f);
             }
@@ -65,6 +66,7 @@ public class CharacterMove : MonoBehaviour
                 if (!animator.GetBool("Walk"))
                 {
                     animator.SetBool("Walk", true);
+                    animator.SetTrigger("Stand"); // Make sure idle animation is active.
                 }
                 animator.speed = Mathf.Max(Mathf.Abs(rigidbody.velocity.x) * walkAnimationSpeedMultiplier, 1f);
             }
