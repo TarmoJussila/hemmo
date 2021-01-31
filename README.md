@@ -1,6 +1,6 @@
 # HEMMO
 
-**Team Raunio** is excited to introduce to you our game entry for Global Game Jam / Finnish Game Jam 2021. **Hemmo** is a classic platformer puzzle game with a nostalgic atmosphere.
+**Hemmo** is a classic platformer game with a nostalgic atmosphere. In this game you are playing as Hemmo the French bulldog. Hemmo has found himself at a difficult situation where all his masks have been lost. Can you help Hemmo find all the lost masks and make Hemmo feel *funky* again?
 
 # History
 
@@ -26,14 +26,9 @@ The game was created with **Unity 2019.4.16f1**.
 
 | Action        | Bind           | Controller  |
 | ------------- |:-------------:| -----:|
-| Move Forward     | W | Left Stick |
-| Move Backward     | S | Left Stick |
-| Move Left | A | Left Stick |
-| Move Right | D | Left Stick |
-| Look Around | Mouse | Right Stick |
-| Fly Up | Spacebar | Left Trigger |
-| Speed Boost | Shift | Right Trigger |
-
+| Move Right     | Right Arrow | Right Stick |
+| Move Left     | Left Arrow | Left Stick |
+| Jump/Climb | Space | Triggers |
 
 # Credits - Team Raunio
 
