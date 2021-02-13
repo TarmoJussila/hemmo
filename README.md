@@ -2,7 +2,7 @@
 
 **Hemmo** is a classic platformer game with a nostalgic atmosphere. In this game you are playing as Hemmo the French bulldog. Hemmo has found himself at a difficult situation where all his masks have been lost. Can you help Hemmo find all the lost masks and make Hemmo feel *funky* again?
 
->NOTICE: You can find the Global Game Jam 2021 version of the game from [the release page](https://github.com/TarmoJussila/Hemmo/releases/tag/global-game-jam-2021).
+>NOTICE: You can find the original Global Game Jam 2021 version of the game from [the release page](https://github.com/TarmoJussila/Hemmo/releases/tag/global-game-jam-2021).
 
 # History
 
@@ -14,7 +14,7 @@ Gameplay video: [**Watch**](https://youtu.be/9fP6WQv6Hz8)
 
 # Download
 
-Executable (Windows): [**Download**](https://ggj.s3.amazonaws.com/games/2021/01/184589/exec/L6laY/Hemmo.zip)
+Executable(s): [**See releases**](https://github.com/TarmoJussila/Hemmo/releases)
 
 # Build
 
