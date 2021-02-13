@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 8983300749852363880}
   - component: {fileID: 1359313976539247560}
   - component: {fileID: 4284217513139362640}
-  - component: {fileID: 682356605389479214}
+  - component: {fileID: 1894887786432244967}
   - component: {fileID: 1462688867415836194}
   m_Layer: 9
   m_Name: Character
@@ -272,8 +272,8 @@ MonoBehaviour:
   followTransform: {fileID: 8937191719188275901}
   smoothTime: 1
   followOffset: {x: -1.35, y: 7}
---- !u!60 &682356605389479214
-PolygonCollider2D:
+--- !u!58 &1894887786432244967
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -281,28 +281,13 @@ PolygonCollider2D:
   m_GameObject: {fileID: 3568339454520970615}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: ed640fa5473d3f34a94da534d181411c, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.35, y: 4.15}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.09394455, y: 0.34197998}
-      - {x: -0.7568215, y: 0.26794815}
-      - {x: -0.684451, y: -0.56}
-      - {x: 0.16200793, y: -0.56}
-      - {x: 0.81673205, y: 0.19112444}
-      - {x: 0.57345295, y: 0.56617355}
+  m_Offset: {x: -1.5, y: 4.2}
+  serializedVersion: 2
+  m_Radius: 0.65
 --- !u!50 &1462688867415836194
 Rigidbody2D:
   serializedVersion: 4

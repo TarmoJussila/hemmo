@@ -1,7 +1,10 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class CharacterMove : MonoBehaviour
 {
+    private enum PlatformContact { None, Ground, Wall }
+
     [SerializeField] private CharacterInput characterInput;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpSpeed;
@@ -15,6 +18,7 @@ public class CharacterMove : MonoBehaviour
 
     private float jumpTimer;
     private bool isCharacterDirectionRight;
+    private Vector3 lastCollisionPosition;
 
     private void Awake()
     {
@@ -26,15 +30,11 @@ public class CharacterMove : MonoBehaviour
     private void OnEnable()
     {
         CharacterInput.OnCharacterJump += OnCharacterJump;
-        CharacterInput.OnCharacterReach += OnCharacterReach;
-        CharacterInput.OnCharacterStand += OnCharacterStand;
     }
 
     private void OnDisable()
     {
         CharacterInput.OnCharacterJump -= OnCharacterJump;
-        CharacterInput.OnCharacterReach -= OnCharacterReach;
-        CharacterInput.OnCharacterStand -= OnCharacterStand;
     }
 
     private void FixedUpdate()
@@ -46,7 +46,6 @@ public class CharacterMove : MonoBehaviour
                 if (!animator.GetBool("Walk"))
                 {
                     animator.SetBool("Walk", true);
-                    animator.SetTrigger("Stand"); // Make sure idle animation is active.
                 }
                 animator.speed = Mathf.Max(Mathf.Abs(rigidbody.velocity.x) * walkAnimationSpeedMultiplier, 1f);
             }
@@ -66,7 +65,6 @@ public class CharacterMove : MonoBehaviour
                 if (!animator.GetBool("Walk"))
                 {
                     animator.SetBool("Walk", true);
-                    animator.SetTrigger("Stand"); // Make sure idle animation is active.
                 }
                 animator.speed = Mathf.Max(Mathf.Abs(rigidbody.velocity.x) * walkAnimationSpeedMultiplier, 1f);
             }
@@ -109,49 +107,77 @@ public class CharacterMove : MonoBehaviour
 
     private void OnCharacterJump()
     {
-        if (!CanJump() || !IsTouchingGround())
+        if (IsJumping())
         {
             return;
         }
 
-        animator.ResetTrigger("Reach");
-        animator.ResetTrigger("Stand");
-        animator.SetTrigger("Jump");
+        var platformContact = GetCurrentPlatformContact();
+        if (platformContact == PlatformContact.Ground)
+        {
+            animator.ResetTrigger("Climb");
+            animator.SetTrigger("Jump");
+        }
+        else if (platformContact == PlatformContact.Wall)
+        {
+            animator.ResetTrigger("Jump");
+            animator.SetTrigger("Climb");
+        }
+        else
+        {
+            return;
+        }
+
         animator.SetBool("Walk", false);
         animator.speed = 1f;
         rigidbody.AddForce(new Vector2(0f, jumpSpeed * Time.fixedDeltaTime), ForceMode2D.Impulse);
         jumpTimer = jumpTimeLimit;
     }
 
-    private void OnCharacterReach()
+    private PlatformContact GetCurrentPlatformContact()
     {
-        if (!IsTouchingGround())
+        bool isTouchingWorld = rigidbody.IsTouchingLayers(worldLayerMask);
+        PlatformContact platformContact = PlatformContact.None;
+
+        if (isTouchingWorld)
         {
-            return;
+            ContactFilter2D filter = new ContactFilter2D
+            {
+                useTriggers = false,
+                useLayerMask = true,
+                layerMask = worldLayerMask
+            };
+
+            List<ContactPoint2D> contacts = new List<ContactPoint2D>();
+            int contactCount = rigidbody.GetContacts(filter, contacts);
+            lastCollisionPosition = Vector3.zero;
+
+            if (contactCount > 0 && contacts.Count > 0)
+            {
+                for (int i = 0; i < contacts.Count; i++)
+                {
+                    float x = contacts[i].point.x - characterContainer.position.x;
+                    float y = contacts[i].point.y - characterContainer.position.y;
+
+                    if (y < -0.3f)
+                    {
+                        platformContact = PlatformContact.Ground;
+                        lastCollisionPosition = new Vector3(x, y, 0f);
+                        Debug.Log("Platform contact: " + platformContact + ":" + x + "," + y);
+                        break;
+                    }
+                    else if (Mathf.Abs(x) > 0.2f)
+                    {
+                        platformContact = PlatformContact.Wall;
+                        lastCollisionPosition = new Vector3(x, y, 0f);
+                        Debug.Log("Platform contact: " + platformContact + ":" + x + "," + y);
+                        break;
+                    }
+                }
+            }
         }
 
-        animator.ResetTrigger("Stand");
-        animator.ResetTrigger("Jump");
-        animator.SetTrigger("Reach");
-        animator.speed = 1f;
-    }
-
-    private void OnCharacterStand()
-    {
-        if (!IsTouchingGround())
-        {
-            return;
-        }
-
-        animator.ResetTrigger("Reach");
-        animator.ResetTrigger("Jump");
-        animator.SetTrigger("Stand");
-        animator.speed = 1f;
-    }
-
-    private bool IsTouchingGround()
-    {
-        return rigidbody.IsTouchingLayers(worldLayerMask);
+        return platformContact;
     }
 
     private bool CanJump()
@@ -161,6 +187,12 @@ public class CharacterMove : MonoBehaviour
 
     private bool IsJumping()
     {
-        return !CanJump() || !IsTouchingGround();
+        return !CanJump() || GetCurrentPlatformContact() == PlatformContact.None;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(characterContainer.position + lastCollisionPosition, 0.2f);
     }
 }
